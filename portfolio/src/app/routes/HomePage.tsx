@@ -4,6 +4,7 @@ import { PrototomeWebUiBlurb } from "../../features/prototomeWebUi"
 import { BskiBlurb } from "../../features/bski"
 import { BrainSlosherBlurb } from "@/features/brainSlosher";
 import { DynamicForagingBlurb } from "@/features/dynamicForaging"
+import { ExaSpimUi } from "@/features/exaSpimUi";
 
 export const HomePage = () => {
   return (
@@ -29,6 +30,7 @@ export const HomePage = () => {
       }}
     >
       <DynamicForagingBlurb/>
+      <ExaSpimUi/>
     </div>
     </Stack>
   );
