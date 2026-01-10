@@ -1,6 +1,6 @@
 import { AppProvider } from "./provider.tsx";
 import { BrowserRouter } from "react-router-dom";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import { AppRouter } from "./router.tsx";
 import MainLayout from "../components/layouts/MainLayouts.tsx";
 import { SplashScreen } from "../components/ui/SplashScreen";

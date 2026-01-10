@@ -7,10 +7,14 @@ import { DynamicForagingBlurb } from "@/features/dynamicForaging";
 import { ExaSpimUi } from "@/features/exaSpimUi";
 
 export const HomePage = () => {
-
   return (
     <div style={{ position: "relative" }}>
-      <Stack style={{ paddingLeft: 50, paddingRight: 50 }}>
+      <Stack
+        style={{
+          paddingLeft: "clamp(1rem, 5%, 50px)",
+          paddingRight: "clamp(1rem, 5%, 50px)",
+        }}
+      >
         <div
           style={{
             display: "grid",

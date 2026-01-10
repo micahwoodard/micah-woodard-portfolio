@@ -1,8 +1,8 @@
-import { Card } from '@mantine/core';
-import type { CardProps } from '@mantine/core';
-import { useThemeStore } from '@/stores/themeStore';
-import type { ReactNode } from 'react';
-import classes from './ProjectCard.module.css';
+import { Card } from "@mantine/core";
+import type { CardProps } from "@mantine/core";
+import { useThemeStore } from "@/stores/themeStore";
+import type { ReactNode } from "react";
+import classes from "./ProjectCard.module.css";
 
 interface ProjectCardProps extends CardProps {
   imageSrc: string;
@@ -10,55 +10,54 @@ interface ProjectCardProps extends CardProps {
   overlayContent?: ReactNode;
 }
 
-export const ProjectCard = ({ 
-    imageSrc,
-    imageAlt,
-    overlayContent,
-     ...props
+export const ProjectCard = ({
+  imageSrc,
+  imageAlt,
+  overlayContent,
+  ...props
 }: ProjectCardProps) => {
-    const colorScheme = useThemeStore((state) => state.colorScheme);
-    
-    const gradientOverlay =
-    colorScheme === 'light'
-      ? 'linear-gradient(to top, #ffffffff, #ffffffff, #ffffffb3, #ffffff33, #ffffff00)'
-      : 'linear-gradient(to top, #2c2c2cff, #2c2c2cff, #2c2c2ce6, #2c2c2c33, #2c2c2c00)';
+  const colorScheme = useThemeStore((state) => state.colorScheme);
 
-    return (
+  const gradientOverlay =
+    colorScheme === "light"
+      ? "linear-gradient(to top, #ffffffff, #ffffffff, #ffffffb3, #ffffff33, #ffffff00)"
+      : "linear-gradient(to top, #2c2c2cff, #2c2c2cff, #2c2c2ce6, #2c2c2c33, #2c2c2c00)";
+
+  return (
     <div className={classes.cardWrapper}>
-    <Card
-      p="lg"
-      radius="md"
-      className={classes.card}
-      {...props}
-    >
-      <div>
-        <img
-          src={imageSrc}
-          alt={imageAlt}
-          style={{width: '100%', 
-                  borderRadius: '12px'}}
-        />
+      <Card p="lg" radius="md" className={classes.card} {...props}>
+        <div>
+          <img
+            src={imageSrc}
+            alt={imageAlt}
+            style={{ width: "100%", borderRadius: "12px" }}
+          />
+          <div
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              background: gradientOverlay,
+            }}
+          />
+        </div>
         <div
           style={{
-            position: 'absolute',
-            top: 0,
+            position: "absolute",
+            bottom: 0,
             left: 0,
-            width: '100%',
-            height: '100%',
-            background: gradientOverlay,
-          }}
-        />
-      </div>
-        <div
-        style={{
-            position: 'absolute',
-            bottom: '1rem',
-            paddingRight: "5px"
+            width: "100%",
+            height: "50%",
+            padding: "0.75rem",
+            boxSizing: "border-box",
+            display: "flex",
           }}
         >
-          {overlayContent}
+          <p>{overlayContent}</p>
         </div>
-    </Card>
+      </Card>
     </div>
   );
 };

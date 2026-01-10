@@ -6,7 +6,7 @@ import path from "path";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: '/micah-woodard-portfolio/',
+  base: "/micah-woodard-portfolio/",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "src"),

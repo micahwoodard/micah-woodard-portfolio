@@ -3,35 +3,45 @@ import { ProjectCard } from "@/components/ui/ProjectCard";
 
 export const DynamicForagingBlurb = () => {
   const bulletPoints = [
-    "Redesigning a dynamic foraging behavior platform—a system that runs and monitors automated animal behavior experiments—to be modular, maintainable, and scalable, with clean interfaces and reusable components",
-    "Defining architecture and standards to separate task logic from the GUI, align with organizational guidelines, and enable shareable workflows.",
-    "Improving maintainability and composability by planning reusable modules, clear interfaces, and decoupling from legacy infrastructure."
+    "Redesigning mouse experiment platform to be modular, maintainable, and scalable",
+    "Defining architecture to align with organizational standards, and enable shareable workflows.",
+    "Leading and coordinating tasks across teams to implement platform effectively and effiecently",
   ];
 
   return (
-    <ProjectCard imageSrc={DynamicForagingArc} imageAlt="Dynamic Foraging Arc" overlayContent={
-    <div>
-        <h3
-          style={{
-            fontSize: '18px',
-            fontWeight: 600,
-          }}
-        >
-          Dynamic Foraging Behavior Platform
-        </h3>
-        {bulletPoints.map((point, index) => (
-          <p
-            key={index}
+    <ProjectCard
+      imageSrc={DynamicForagingArc}
+      imageAlt="Dynamic Foraging Arc"
+      overlayContent={
+        <div>
+          <h3
             style={{
-              fontSize: 'clamp(14px, 2cqw, 18px)',
-              lineHeight: '1.6',
-              paddingTop:5,
+              fontWeight: 600,
+              fontSize: "clamp(0.55rem, 2.2vw, 1rem)",
             }}
           >
-            • {point}
-          </p>
-        ))}
-      </div>
-  } />
+            Dynamic Foraging Behavior Platform
+          </h3>
+          <h3
+            style={{
+              fontSize: "clamp(0.55rem, 2.2vw, 1rem)",
+              marginTop: 5,
+              lineHeight: 1.25,
+            }}
+          >
+            {bulletPoints.map((point, index) => (
+              <p
+                key={index}
+                style={{
+                  marginBottom: 2.5,
+                }}
+              >
+                • {point}
+              </p>
+            ))}
+          </h3>
+        </div>
+      }
+    />
   );
 };

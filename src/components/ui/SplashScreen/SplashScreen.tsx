@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Center, Text } from "@mantine/core";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -17,7 +17,7 @@ export const SplashScreen = ({ onDone }: { onDone: () => void }) => {
   const streams = 6;
 
   // Generate wave-like streams
-  const waves = Array.from({ length: streams }).map((_, i) => {
+  const waves = Array.from({ length: streams }).map((_) => {
     const color = `rgb(221, 146, 221,${0.2 + Math.random() * 0.3})`;
     const offsetX = Math.random() * 100 - 50;
     const delay = Math.random() * 2;
@@ -31,7 +31,7 @@ export const SplashScreen = ({ onDone }: { onDone: () => void }) => {
         <motion.div
           initial={{ opacity: 1 }}
           animate={{ opacity: 1 }}
-          exit={{ opacity: 0, transition: { duration: 2} }}
+          exit={{ opacity: 0, transition: { duration: 2 } }}
           onAnimationComplete={handleAnimationComplete}
           style={{
             position: "fixed",
@@ -60,17 +60,15 @@ export const SplashScreen = ({ onDone }: { onDone: () => void }) => {
                 }}
                 transition={{
                   duration: 3 + Math.random() * 2,
-                  
+
                   ease: "easeInOut",
                   delay: wave.delay,
                 }}
               />
             ))}
             <motion.div style={{ position: "relative", zIndex: 1 }}>
-              <Text
-                  style={{ fontSize: 40, textAlign:"left" }} 
-                >
-                  MICAH WOODARD
+              <Text style={{ fontSize: 40, textAlign: "left" }}>
+                MICAH WOODARD
               </Text>
             </motion.div>
           </Center>

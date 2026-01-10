@@ -1,7 +1,10 @@
-import { Text } from '@mantine/core';
-import type { FallbackProps } from 'react-error-boundary';
+import { Text } from "@mantine/core";
+import type { FallbackProps } from "react-error-boundary";
 
-export const MainErrorFallback = ({ error, resetErrorBoundary }: FallbackProps) => {
+export const MainErrorFallback = ({
+  error,
+  resetErrorBoundary,
+}: FallbackProps) => {
   return (
     <div className="flex h-screen w-screen flex-col items-center justify-center text-red-500">
       <Text>Something went terribly wrong</Text>

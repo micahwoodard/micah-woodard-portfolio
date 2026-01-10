@@ -10,10 +10,9 @@ type AppProviderProps = {
 };
 
 export const AppProvider = ({ children }: AppProviderProps) => {
-
   const { colorScheme } = useThemeStore();
 
-  // Set root to have "dark" class for tailwind dark mode theming 
+  // Set root to have "dark" class for tailwind dark mode theming
   React.useEffect(() => {
     const root = document.documentElement;
     if (colorScheme === "dark") {
@@ -33,12 +32,12 @@ export const AppProvider = ({ children }: AppProviderProps) => {
     >
       <MantineProvider
         theme={{
-          fontFamily: "DM Sans"
-              }}
-          forceColorScheme={colorScheme}   
+          fontFamily: "DM Sans",
+        }}
+        forceColorScheme={colorScheme}
       >
         <ErrorBoundary FallbackComponent={MainErrorFallback}>
-            {children}
+          {children}
         </ErrorBoundary>
       </MantineProvider>
     </React.Suspense>
