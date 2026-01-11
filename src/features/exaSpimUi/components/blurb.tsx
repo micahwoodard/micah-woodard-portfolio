@@ -12,34 +12,21 @@ export const ExaSpimUi = () => {
     <ProjectCard
       imageSrc={ExaSpimUiImage}
       imageAlt="ExaSpim UI"
+      title="ExaSpim UI"
       overlayContent={
         <div>
-          <h3
-            style={{
-              fontSize: "clamp(0.5rem, 2.2vw, 1rem)",
-              fontWeight: 600,
-            }}
-          >
-            ExaSpim UI
-          </h3>
-          <h3
-            style={{
-              fontSize: "clamp(0.5rem, 2.2vw, 1rem)",
-              marginTop: 5,
-              lineHeight: 1.25,
-            }}
-          >
-            {bulletPoints.map((point, index) => (
-              <p
-                key={index}
-                style={{
-                  marginBottom: 2.5,
-                }}
-              >
-                • {point}
-              </p>
-            ))}
-          </h3>
+          {bulletPoints.map((point, index) => (
+            <p
+              key={index}
+              style={{
+                marginBottom: 10,
+                fontSize: "clamp(.9rem, 2.2vw, 1.2rem)",
+                lineHeight: 1.5,
+              }}
+            >
+              • {point}
+            </p>
+          ))}
         </div>
       }
     />

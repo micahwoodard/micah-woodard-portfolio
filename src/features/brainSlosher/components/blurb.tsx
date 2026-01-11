@@ -12,34 +12,22 @@ export const BrainSlosherBlurb = () => {
     <ProjectCard
       imageSrc={BrainSlosherUI}
       imageAlt="Brain Slosher UI"
+      title="Brain Slosher Software"
       overlayContent={
         <div>
-          <h3
-            style={{
-              fontSize: "18px",
-              fontWeight: 600,
-            }}
-          >
-            Brain Slosher Software
-          </h3>
-          <h3
-            style={{
-              fontSize: "clamp(0.88rem, 2.2vw, .95rem)",
-              marginTop: 5,
-              lineHeight: 1.25,
-            }}
-          >
-            {bulletPoints.map((point, index) => (
-              <p
-                key={index}
-                style={{
-                  marginBottom: 2.5,
-                }}
-              >
-                • {point}
-              </p>
-            ))}
-          </h3>
+          {bulletPoints.map((point, index) => (
+            <p
+              key={index}
+              style={{
+                marginBottom: 10,
+                fontSize: "clamp(1rem, 2.2vw, 1.1rem)",
+                marginTop: 5,
+                lineHeight: 1.5,
+              }}
+            >
+              • {point}
+            </p>
+          ))}
         </div>
       }
     />

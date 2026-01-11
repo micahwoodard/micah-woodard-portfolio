@@ -32,6 +32,8 @@ export const Header = () => {
         <Menu trigger="hover" openDelay={100} closeDelay={200}>
           <Menu.Target>
             <Text
+              component={Link}
+              to="/micah-woodard-portfolio"
               variant={location.pathname === "/about" ? "filled" : "outline"}
               style={{ fontSize: "clamp(8px, 2vw, 16px)", textAlign: "right" }}
             >
@@ -56,16 +58,24 @@ export const Header = () => {
         </Menu>
         <Text
           component={Link}
-          to="/"
-          variant={location.pathname === "/about" ? "filled" : "outline"}
+          to="/micah-woodard-portfolio/about"
+          variant={
+            location.pathname === "/micah-woodard-portfolio/about"
+              ? "filled"
+              : "outline"
+          }
           style={{ fontSize: "clamp(8px, 2vw, 16px)", textAlign: "right" }}
         >
           ABOUT
         </Text>
         <Text
           component={Link}
-          to="/"
-          variant={location.pathname === "/resume" ? "filled" : "outline"}
+          to="/micah-woodard-portfolio/resume"
+          variant={
+            location.pathname === "/micah-woodard-portfolio/resume"
+              ? "filled"
+              : "outline"
+          }
           style={{ fontSize: "clamp(8px, 2vw, 16px)", textAlign: "right" }}
         >
           RESUME

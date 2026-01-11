@@ -7,14 +7,15 @@ import classes from "./ProjectCard.module.css";
 interface ProjectCardProps extends CardProps {
   imageSrc: string;
   imageAlt?: string;
+  title: string;
   overlayContent?: ReactNode;
 }
-
+console.log(getComputedStyle(document.body).backgroundColor);
 export const ProjectCard = ({
   imageSrc,
   imageAlt,
+  title,
   overlayContent,
-  ...props
 }: ProjectCardProps) => {
   const colorScheme = useThemeStore((state) => state.colorScheme);
 
@@ -25,7 +26,8 @@ export const ProjectCard = ({
 
   return (
     <div className={classes.cardWrapper}>
-      <Card p="lg" radius="md" className={classes.card} {...props}>
+      <h3 className={classes.cardTitle}>{title}</h3>
+      <Card p="lg" radius="md" className={classes.card}>
         <div>
           <img
             src={imageSrc}
@@ -49,13 +51,20 @@ export const ProjectCard = ({
             bottom: 0,
             left: 0,
             width: "100%",
-            height: "50%",
-            padding: "0.75rem",
+            height: "45%",
+            paddingBottom: "env(safe-area-inset-bottom)",
             boxSizing: "border-box",
-            display: "flex",
           }}
         >
-          <p>{overlayContent}</p>
+          <div
+            style={{
+              position: "absolute",
+              marginLeft: 10,
+              bottom: 0,
+            }}
+          >
+            {overlayContent}
+          </div>
         </div>
       </Card>
     </div>

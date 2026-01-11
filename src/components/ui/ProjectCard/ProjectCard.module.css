@@ -1,3 +1,14 @@
+.cardTitle {
+  transition:
+    transform 120ms ease,
+    font-size 120ms ease;
+  transform-origin: left bottom;
+}
+
+.cardWrapper:hover .cardTitle {
+  transform: scale(1.15);
+}
+
 .cardWrapper {
   position: relative;
   width: 100%;
