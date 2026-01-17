@@ -1,4 +1,4 @@
-import ExaSpimUiImage from "../assests/exaspim_instrument_control.jpg";
+import ExaSpimUiImage from "../assests/exaspim_instrument_control_cropped.jpg";
 import { ProjectCard } from "@/components/ui/ProjectCard";
 
 export const ExaSpimUi = () => {
@@ -13,6 +13,7 @@ export const ExaSpimUi = () => {
       imageSrc={ExaSpimUiImage}
       imageAlt="ExaSpim UI"
       title="ExaSpim UI"
+      href="/micah-woodard-portfolio/exa_spim"
       overlayContent={
         <div>
           {bulletPoints.map((point, index) => (
@@ -20,7 +21,6 @@ export const ExaSpimUi = () => {
               key={index}
               style={{
                 marginBottom: 10,
-                fontSize: "clamp(.9rem, 2.2vw, 1.2rem)",
                 lineHeight: 1.5,
               }}
             >

@@ -4,7 +4,7 @@ import { ProjectCard } from "@/components/ui/ProjectCard";
 export const BrainSlosherBlurb = () => {
   const bulletPoints = [
     "Python control software for fluidics system used in washing stained tissue samples.",
-    "Web application for configuration of protocol and real time progress monitoring",
+    "React web application for configuration of protocol and real time progress monitoring",
     "Frontend built with React, organized using bulletproof-react architecture",
   ];
 
@@ -13,6 +13,7 @@ export const BrainSlosherBlurb = () => {
       imageSrc={BrainSlosherUI}
       imageAlt="Brain Slosher UI"
       title="Brain Slosher Software"
+      href="/micah-woodard-portfolio/brain_slosher"
       overlayContent={
         <div>
           {bulletPoints.map((point, index) => (
@@ -20,8 +21,6 @@ export const BrainSlosherBlurb = () => {
               key={index}
               style={{
                 marginBottom: 10,
-                fontSize: "clamp(1rem, 2.2vw, 1.1rem)",
-                marginTop: 5,
                 lineHeight: 1.5,
               }}
             >

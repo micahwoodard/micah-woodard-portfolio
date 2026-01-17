@@ -1,4 +1,4 @@
-import DynamicForagingArc from "../assests/DynamicForagingArchitecture-Dynamic Foraging Architecture.drawio.png";
+import DynamicForagingArc from "../assests/DynamicForagingArchitecture-Dynamic Foraging Architecture_cropped.png";
 import { ProjectCard } from "@/components/ui/ProjectCard";
 
 export const DynamicForagingBlurb = () => {
@@ -13,6 +13,7 @@ export const DynamicForagingBlurb = () => {
       imageSrc={DynamicForagingArc}
       imageAlt="Dynamic Foraging Arc"
       title="Dynamic Foraging Behavior Platform"
+      href="/micah-woodard-portfolio/dynamic_foraging"
       overlayContent={
         <div>
           {bulletPoints.map((point, index) => (
@@ -20,8 +21,6 @@ export const DynamicForagingBlurb = () => {
               key={index}
               style={{
                 marginBottom: 10,
-                fontSize: "clamp(.8rem, 2.2vw, 1.1rem)",
-                marginTop: 5,
                 lineHeight: 1.5,
               }}
             >

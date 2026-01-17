@@ -13,6 +13,7 @@ export const BskiBlurb = () => {
       imageSrc={registerWidget}
       imageAlt="BSKI UI"
       title="Brain Slice Keeper Indexer"
+      href="/micah-woodard-portfolio/BSKI"
       overlayContent={
         <div>
           {bulletPoints.map((point, index) => (

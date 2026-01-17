@@ -1,4 +1,4 @@
-import prototomeUiImage from "../assests/prototome_home_page_with_brain_slice.png";
+import prototomeUiImage from "../assests/prototome_home_page_with_brain_slice_cropped.png";
 import { ProjectCard } from "@/components/ui/ProjectCard";
 
 export const PrototomeWebUiBlurb = () => {
@@ -13,6 +13,7 @@ export const PrototomeWebUiBlurb = () => {
       imageSrc={prototomeUiImage}
       imageAlt="Prototome UI"
       title="Prototome Web UI"
+      href="/micah-woodard-portfolio/prototome_web_ui"
       overlayContent={
         <div>
           {bulletPoints.map((point, index) => (
@@ -20,7 +21,6 @@ export const PrototomeWebUiBlurb = () => {
               key={index}
               style={{
                 marginBottom: 10,
-                fontSize: "clamp(1rem,  2.2vw, 1.1rem)",
                 lineHeight: 1.5,
               }}
             >

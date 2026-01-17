@@ -1,10 +1,10 @@
 import { Stack } from "@mantine/core";
 
-import { PrototomeWebUiBlurb } from "../../features/prototomeWebUi";
-import { BskiBlurb } from "../../features/bski";
-import { BrainSlosherBlurb } from "@/features/brainSlosher";
-import { DynamicForagingBlurb } from "@/features/dynamicForaging";
-import { ExaSpimUi } from "@/features/exaSpimUi";
+import { PrototomeWebUiBlurb } from "../../features/prototomeWebUi/components/blurb";
+import { BskiBlurb } from "../../features/bski/components/blurb";
+import { BrainSlosherBlurb } from "../../features/brainSlosher/components/blurb";
+import { DynamicForagingBlurb } from "../../features/dynamicForaging/components/blurb";
+import { ExaSpimUi } from "../../features/exaSpimUi/components/blurb";
 
 export const HomePage = () => {
   return (

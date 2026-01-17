@@ -41,17 +41,33 @@ export const Header = () => {
             </Text>
           </Menu.Target>
           <Menu.Dropdown>
-            <Menu.Item onClick={() => navigate("/prototome_web_ui")}>
+            <Menu.Item
+              onClick={() =>
+                navigate("/micah-woodard-portfolio/prototome_web_ui")
+              }
+            >
               PROTOTOME WEB UI
             </Menu.Item>
-            <Menu.Item onClick={() => navigate("/BSKI")}>BSKI</Menu.Item>
-            <Menu.Item onClick={() => navigate("/brain_slosher")}>
+            <Menu.Item
+              onClick={() => navigate("/micah-woodard-portfolio/BSKI")}
+            >
+              BSKI
+            </Menu.Item>
+            <Menu.Item
+              onClick={() => navigate("/micah-woodard-portfolio/brain_slosher")}
+            >
               BRAIN SLOSHER
             </Menu.Item>
-            <Menu.Item onClick={() => navigate("/dynamic_foraging")}>
+            <Menu.Item
+              onClick={() =>
+                navigate("/micah-woodard-portfolio/dynamic_foraging")
+              }
+            >
               DYNAMIC FORAGING
             </Menu.Item>
-            <Menu.Item onClick={() => navigate("/exa_spim_ui")}>
+            <Menu.Item
+              onClick={() => navigate("/micah-woodard-portfolio/exa_spim_ui")}
+            >
               EXA-SPIM UI
             </Menu.Item>
           </Menu.Dropdown>
