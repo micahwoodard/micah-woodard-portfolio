@@ -2,31 +2,22 @@ import DynamicForagingArc from "../assests/DynamicForagingArchitecture-Dynamic F
 import { ProjectCard } from "@/components/ui/ProjectCard";
 
 export const DynamicForagingBlurb = () => {
-  const bulletPoints = [
-    "Redesigning mouse experiment platform to be modular, maintainable, and scalable",
-    "Defining architecture to align with organizational standards, and enable shareable workflows.",
-    "Leading and coordinating tasks across teams to implement platform effectively and effiecently",
-  ];
-
   return (
     <ProjectCard
       imageSrc={DynamicForagingArc}
       imageAlt="Dynamic Foraging Arc"
       title="Dynamic Foraging Behavior Platform"
       href="/micah-woodard-portfolio/dynamic_foraging"
+      repoUrl="https://github.com/AllenNeuralDynamics/Aind.Behavior.DynamicForaging"
       overlayContent={
         <div>
-          {bulletPoints.map((point, index) => (
-            <p
-              key={index}
-              style={{
-                marginBottom: 10,
-                lineHeight: 1.5,
-              }}
-            >
-              • {point}
-            </p>
-          ))}
+          A software platform for runnning live mice experiments that supports
+          experimental control, data collection, and interaction with institute
+          infrastructure. This project is an ongoing refactor aimed at improving
+          maintainability and scalability as the platform continues to evolve. I
+          am leading the redesign, focusing on modularity, adherence to
+          institute standards, and reusability, while coordinating cross-team
+          contributions to the project.
         </div>
       }
     />

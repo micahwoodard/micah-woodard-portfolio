@@ -2,31 +2,21 @@ import BrainSlosherUI from "../assests/brain_slosher_ui_cropped.png";
 import { ProjectCard } from "@/components/ui/ProjectCard";
 
 export const BrainSlosherBlurb = () => {
-  const bulletPoints = [
-    "Python control software for fluidics system used in washing stained tissue samples.",
-    "React web application for configuration of protocol and real time progress monitoring",
-    "Frontend built with React, organized using bulletproof-react architecture",
-  ];
-
   return (
     <ProjectCard
       imageSrc={BrainSlosherUI}
       imageAlt="Brain Slosher UI"
       title="Brain Slosher Software"
       href="/micah-woodard-portfolio/brain_slosher"
+      repoUrl="https://github.com/AllenNeuralDynamics/brainslosher-web-ui"
       overlayContent={
         <div>
-          {bulletPoints.map((point, index) => (
-            <p
-              key={index}
-              style={{
-                marginBottom: 10,
-                lineHeight: 1.5,
-              }}
-            >
-              • {point}
-            </p>
-          ))}
+          Python control software for a fluidics system used to wash stained
+          tissue samples, with a React web app for protocol configuration and
+          real-time monitoring. It was built to reduce repetitive wash steps,
+          freeing up research assistants’ time and minimizing human error. I
+          designed and implemented both the control software and frontend,
+          focusing on reusability and user-friendliness.
         </div>
       }
     />

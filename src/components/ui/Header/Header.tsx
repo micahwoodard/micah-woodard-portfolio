@@ -10,7 +10,6 @@ export const Header = () => {
     <Container
       style={{
         paddingTop: "clamp(1rem, 5%, 50px)",
-        paddingBottom: 50,
         paddingLeft: "clamp(1rem, 5%, 50px)",
       }}
       fluid

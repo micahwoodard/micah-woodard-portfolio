@@ -4,6 +4,7 @@ import { useThemeStore } from "@/stores/themeStore";
 import type { ReactNode } from "react";
 import classes from "./ProjectCard.module.css";
 import { useNavigate } from "react-router-dom";
+import { IconLink } from "@tabler/icons-react";
 
 interface ProjectCardProps extends CardProps {
   imageSrc: string;
@@ -11,6 +12,7 @@ interface ProjectCardProps extends CardProps {
   title: string;
   overlayContent?: ReactNode;
   href: string;
+  repoUrl: string;
 }
 console.log(getComputedStyle(document.body).backgroundColor);
 export const ProjectCard = ({
@@ -19,13 +21,14 @@ export const ProjectCard = ({
   title,
   overlayContent,
   href,
+  repoUrl,
 }: ProjectCardProps) => {
   const navigate = useNavigate();
   const colorScheme = useThemeStore((state) => state.colorScheme);
   const gradientOverlay =
     colorScheme === "light"
       ? "linear-gradient(to top, #ffffffff 10%, #ffffffbf, #ffffff00)"
-      : "linear-gradient(to top, #2c2c2cff 10%, #2c2c2cbf, #2c2c2c1a, #2c2c2c1a )";
+      : "linear-gradient(to top, #2c2c2cff 10%, #2c2c2cbf, #2c2c2c00 )";
 
   return (
     <div className={classes.cardWrapper}>
@@ -41,26 +44,22 @@ export const ProjectCard = ({
         <div
           style={{
             position: "relative",
-            overflow: "hidden", 
+            overflow: "hidden",
           }}
         >
-          <img
-            src={imageSrc}
-            alt={imageAlt}
-            style={{ width: "100%" }}
-          />
+          <img src={imageSrc} alt={imageAlt} style={{ width: "100%" }} />
           <div
             style={{
               position: "absolute",
               inset: 0,
-              background: gradientOverlay
+              background: gradientOverlay,
             }}
           />
         </div>
-          <div
-          >
-            {overlayContent}
-          </div>
+        <div style={{ marginBottom: 10 }}>{overlayContent}</div>
+        <a href={repoUrl} target="_blank" rel="noopener noreferrer">
+          <IconLink />
+        </a>
       </Card>
     </div>
   );
