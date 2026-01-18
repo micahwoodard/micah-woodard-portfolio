@@ -1,3 +1,4 @@
+"use client";
 import { useRef } from "react";
 import { PrototomeWebUiBlurb } from "../../features/prototomeWebUi/components/blurb";
 import { BskiBlurb } from "../../features/bski/components/blurb";
@@ -5,7 +6,8 @@ import { BrainSlosherBlurb } from "../../features/brainSlosher/components/blurb"
 import { DynamicForagingBlurb } from "../../features/dynamicForaging/components/blurb";
 import { ExaSpimUi } from "../../features/exaSpimUi/components/blurb";
 import { IconArrowNarrowDown } from "@tabler/icons-react";
-import fig from "../../assets/homepage_foreground.png";
+import { Title, Text, Button } from "@mantine/core";
+import UseAnimationFrame from "../../components/ui/HomePageAnimation/homePageAnimation";
 
 export const HomePage = () => {
   const projectsRef = useRef<HTMLDivElement>(null);
@@ -17,80 +19,73 @@ export const HomePage = () => {
   return (
     <div>
       <div
-  style={{
-    minHeight: "100vh",
-    display: "grid",
-    gridTemplateColumns: "minmax(160px, 40%) 1fr",
-    alignItems: "start",
-    padding: "2rem",
-    gap: "2rem",
-  }}
->
-  {/* IMAGE — left */}
-  <img
-    src={fig}
-    alt="Illustration"
-    style={{
-      width: "100%",
-      maxWidth: "360px",
-      height: "auto",
-      justifySelf: "start",
-      alignSelf: "start",
-      filter: `
-        drop-shadow(0 0 16px rgba(168, 85, 247, 0.6))
-        drop-shadow(0 0 40px rgba(168, 85, 247, 0.3))
-      `,
-    }}
-  />
+        style={{
+          position: "relative",
+          height: "100vh",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        {/* <img src={background}  style={{width: '50%', zIndex: -1,}}/> */}
+        <div
+          className="animation-container"
+          style={{
+            position: "absolute",
+            zIndex: 0,
+          }}
+        >
+          <UseAnimationFrame />
+        </div>
 
-  {/* TEXT — right, top-aligned */}
-  <div
-    style={{
-      alignSelf: "start",
-      maxWidth: "520px",
-    }}
-  >
-    <h1 style={{ fontSize: "clamp(2rem, 5vw, 3rem)", marginBottom: "1rem" }}>
-      Welcome
-    </h1>
-    <p style={{ fontSize: "1.1rem", marginBottom: "2rem" }}>
-      Check out my projects below
-    </p>
-    <button
-      onClick={scrollToProjects}
-      style={{
-        background: "none",
-        border: "none",
-        cursor: "pointer",
-        fontSize: "2rem",
-        animation: "bounce 2s infinite",
-      }}
-    >
-      <IconArrowNarrowDown />
-    </button>
-  </div>
-</div>
+        <div style={{ position: "relative", zIndex: 1, textAlign: "center" }}>
+          <Title order={1}>Hi!</Title>
+          <Text size="md">
+            My name is Micah Woodard, a software engineer with expertise in
+            instrumentation control and user interfaces. I have worked on a wide
+            range of projects, from microscope applications to fluidics systems
+            to mouse behavior platforms, with a focus on designing and
+            implementing scalable data acquisition systems and accompanying
+            frontends. <br /> Check out my projects below!
+          </Text>
+          <Button
+            onClick={scrollToProjects}
+            style={{
+              background: "none",
+              fontSize: "2rem",
+              animation: "bounce 2s infinite",
+            }}
+          >
+            <IconArrowNarrowDown />
+          </Button>
+        </div>
+      </div>
 
-      {/* PROJECTS */}
       <div
         ref={projectsRef}
         style={{
           display: "grid",
           gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
           gap: "1.5rem",
-          padding: "2rem",
-          justifyContent: "center",
-          transform: "scale(0.8)",
-          transformOrigin: "center",
+          padding: "1.5rem",
         }}
       >
         <PrototomeWebUiBlurb />
         <BskiBlurb />
         <BrainSlosherBlurb />
+      </div>
+
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
+          gap: "1.5rem",
+          padding: "1.5rem",
+        }}
+      >
         <DynamicForagingBlurb />
         <ExaSpimUi />
       </div>
-
       <style>
         {`
           @keyframes bounce {
