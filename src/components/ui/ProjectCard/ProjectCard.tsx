@@ -4,7 +4,7 @@ import { useThemeStore } from "@/stores/themeStore";
 import type { ReactNode } from "react";
 import classes from "./ProjectCard.module.css";
 import { useNavigate } from "react-router-dom";
-import { IconLink } from "@tabler/icons-react";
+import { IconBrandGithubFilled } from "@tabler/icons-react";
 
 interface ProjectCardProps extends CardProps {
   imageSrc: string;
@@ -58,7 +58,7 @@ export const ProjectCard = ({
         </div>
         <div style={{ marginBottom: 10 }}>{overlayContent}</div>
         <a href={repoUrl} target="_blank" rel="noopener noreferrer">
-          <IconLink />
+          <IconBrandGithubFilled />
         </a>
       </Card>
     </div>

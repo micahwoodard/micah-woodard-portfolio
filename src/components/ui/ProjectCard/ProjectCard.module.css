@@ -23,12 +23,12 @@
 }
 
 .card {
-  border: 2px solid #a855f7;
-  box-shadow: 0 4px 40px #a855f7;
+  border: 1px solid light-dark(#8047b6, #3c2155);
+  box-shadow: 0 4px 40px light-dark(#8047b6, #3c2155);
   transition: box-shadow 100ms ease;
   container-type: inline-size;
 }
 
 .cardWrapper:hover .card {
-  box-shadow: 0 16px 100px #a855f7;
+  box-shadow: 0 16px 100px light-dark(#8047b6, #3c2155);
 }

@@ -50,7 +50,7 @@ export default function UseAnimationFrame() {
             width: 300,
             height: 300,
             borderRadius: "50%",
-            background: "rgba(168,85,247,0.6)",
+            background: "light-dark(#8047b6, #3c2155)",
             filter: "blur(30px)",
           }}
         />
@@ -61,7 +61,7 @@ export default function UseAnimationFrame() {
             width: 300,
             height: 300,
             borderRadius: "50%",
-            background: "rgba(168,85,247,0.6)",
+            background: "light-dark(#8047b6, #3c2155)",
             filter: "blur(30px)",
           }}
         />
@@ -72,7 +72,7 @@ export default function UseAnimationFrame() {
             width: 300,
             height: 300,
             borderRadius: "50%",
-            background: "rgba(168,85,247,0.6)",
+            background: "light-dark(#8047b6, #3c2155)",
             filter: "blur(30px)",
           }}
         />
@@ -83,7 +83,7 @@ export default function UseAnimationFrame() {
             width: 200,
             height: 200,
             borderRadius: "50%",
-            background: "rgba(168,85,247,0.6)",
+            background: "light-dark(#8047b6, #3c2155)",
             filter: "blur(30px)",
           }}
         />
