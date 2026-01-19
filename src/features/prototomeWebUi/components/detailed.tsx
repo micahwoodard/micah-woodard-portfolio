@@ -92,8 +92,28 @@ export function PrototomeWebUiDetailed() {
           </Card>
 
           <SimpleGrid cols={{ base: 1, md: 1 }} spacing="lg">
-            <Card withBorder radius="md" p="md">
-              <Image src={Ui} alt="Prototome Web Ui" radius="sm" />
+            <Card
+              withBorder
+              radius="md"
+              p="md"
+              style={{
+                height: "80vh",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <Image
+                src={Ui}
+                alt="Prototome Web Ui"
+                radius="sm"
+                style={{
+                  maxHeight: "100%",
+                  maxWidth: "100%",
+                  objectFit: "contain",
+                  display: "block",
+                }}
+              />
               <Text size="sm" c="dimmed" mt="sm">
                 Prototome Web UI
               </Text>

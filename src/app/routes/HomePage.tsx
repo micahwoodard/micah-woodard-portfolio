@@ -45,7 +45,8 @@ export const HomePage = () => {
             range of projects, from microscope applications to fluidics systems
             to mouse behavior platforms, with a focus on designing and
             implementing scalable data acquisition systems and accompanying
-            frontends. <br /> Check out my projects below!
+            frontends. <br /> Check out my projects below and click anything
+            that looks cool!
           </Text>
           <Button
             onClick={scrollToProjects}

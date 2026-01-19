@@ -113,7 +113,7 @@ export function DynamicForagingDetailed() {
         <Stack gap="sm">
           <Text size="xl">DESIGN & ARCHITECTURE</Text>
           <Card withBorder radius="md" p="lg">
-            <SimpleGrid cols={{ base: 1, md: 3 }} spacing="lg">
+            <SimpleGrid cols={{ base: 1, md: 1 }} spacing="lg">
               <Stack gap="xs">
                 <Title order={4}>Component-Based Architecture</Title>
                 <Text size="sm" c="dimmed">
@@ -124,7 +124,10 @@ export function DynamicForagingDetailed() {
                   can be seen below.
                 </Text>
               </Stack>
-              <Card
+            </SimpleGrid>
+          </Card>
+        </Stack>
+<Card
                 withBorder
                 radius="md"
                 p="md"
@@ -151,10 +154,6 @@ export function DynamicForagingDetailed() {
                   Dynamic foraging architecture.
                 </Text>
               </Card>
-            </SimpleGrid>
-          </Card>
-        </Stack>
-
         {/* Role */}
         <Stack gap="sm">
           <Text size="xl">MY ROLE</Text>

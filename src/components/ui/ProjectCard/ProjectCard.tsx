@@ -39,6 +39,7 @@ export const ProjectCard = ({
         className={classes.card}
         onClick={() => {
           navigate(href);
+          window.scrollTo({ top: 0, behavior: "smooth" });
         }}
       >
         <div
