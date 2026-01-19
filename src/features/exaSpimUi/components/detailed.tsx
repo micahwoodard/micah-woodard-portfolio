@@ -10,7 +10,7 @@ import {
 import { IconBrandGithub, IconLink } from "@tabler/icons-react";
 import BrainImage from "../assests/light_sheet_microscopy_result.jpg";
 import Instrument from "../assests/exaspim_instrument_control.jpg";
-import Acquisition from "../assests/acquisition_view.jpg";
+import Acquisition from "../assests/acquisition_view_demo.gif";
 
 export function ExaSpimDetailed() {
   return (
