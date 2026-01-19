@@ -8,7 +8,6 @@ import {
   SimpleGrid,
   Image,
   Stack,
-  List,
 } from "@mantine/core";
 import { IconBrandGithub } from "@tabler/icons-react";
 import BskiCad from "../assets/bski_cad.jpg";
@@ -57,12 +56,12 @@ export function BskiDetailed() {
             src={BskiCad}
             alt="BSK Indexer main UI screenshot"
             radius="sm"
-            fit="contain" 
+            fit="contain"
             style={{
-              maxHeight: "100%", 
-              maxWidth: "100%", 
+              maxHeight: "100%",
+              maxWidth: "100%",
               objectFit: "contain",
-              display: "block", 
+              display: "block",
             }}
           />
           <Text size="sm" c="dimmed" mt="sm">
@@ -167,23 +166,28 @@ export function BskiDetailed() {
             </SimpleGrid>
           </Card>
 
-          <Card withBorder radius="md" p="md" style={{
-            height: "80vh",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}>
+          <Card
+            withBorder
+            radius="md"
+            p="md"
+            style={{
+              height: "80vh",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
             <Image
               src={Arc}
               alt="BSK Indexer architecture diagram"
               radius="sm"
-              fit="contain" 
-            style={{
-              maxHeight: "100%", 
-              maxWidth: "100%", 
-              objectFit: "contain",
-              display: "block", 
-            }}
+              fit="contain"
+              style={{
+                maxHeight: "100%",
+                maxWidth: "100%",
+                objectFit: "contain",
+                display: "block",
+              }}
             />
             <Text size="sm" c="dimmed" mt="sm">
               High-level architecture showing separation between UI, backend,
