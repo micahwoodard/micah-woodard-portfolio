@@ -127,33 +127,33 @@ export function DynamicForagingDetailed() {
             </SimpleGrid>
           </Card>
         </Stack>
-<Card
-                withBorder
-                radius="md"
-                p="md"
-                style={{
-                  height: "80vh",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                <Image
-                  src={Architecture}
-                  alt="Dynamic foraging architecture."
-                  radius="sm"
-                  fit="contain"
-                  style={{
-                    maxHeight: "100%",
-                    maxWidth: "100%",
-                    objectFit: "contain",
-                    display: "block",
-                  }}
-                />
-                <Text size="sm" c="dimmed" mt="sm">
-                  Dynamic foraging architecture.
-                </Text>
-              </Card>
+        <Card
+          withBorder
+          radius="md"
+          p="md"
+          style={{
+            height: "80vh",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Image
+            src={Architecture}
+            alt="Dynamic foraging architecture."
+            radius="sm"
+            fit="contain"
+            style={{
+              maxHeight: "100%",
+              maxWidth: "100%",
+              objectFit: "contain",
+              display: "block",
+            }}
+          />
+          <Text size="sm" c="dimmed" mt="sm">
+            Dynamic foraging architecture.
+          </Text>
+        </Card>
         {/* Role */}
         <Stack gap="sm">
           <Text size="xl">MY ROLE</Text>
