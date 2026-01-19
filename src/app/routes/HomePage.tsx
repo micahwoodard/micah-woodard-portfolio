@@ -27,7 +27,6 @@ export const HomePage = () => {
           alignItems: "center",
         }}
       >
-        {/* <img src={background}  style={{width: '50%', zIndex: -1,}}/> */}
         <div
           className="animation-container"
           style={{
@@ -40,7 +39,7 @@ export const HomePage = () => {
 
         <div style={{ position: "relative", zIndex: 1, textAlign: "center" }}>
           <Title order={1}>Hi!</Title>
-          <Text size="md">
+          <Text size="md" style={{ maxWidth: "100vh" }}>
             My name is Micah Woodard, a software engineer with expertise in
             instrumentation control and user interfaces. I have worked on a wide
             range of projects, from microscope applications to fluidics systems
