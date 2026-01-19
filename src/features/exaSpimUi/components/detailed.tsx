@@ -1,140 +1,199 @@
 import {
   Container,
-  Title,
   Text,
   Card,
   Button,
   Group,
-  SimpleGrid,
+  Image,
   Stack,
 } from "@mantine/core";
-import { IconBrandGithub } from "@tabler/icons-react";
+import { IconBrandGithub, IconLink } from "@tabler/icons-react";
+import BrainImage from "../assests/light_sheet_microscopy_result.jpg";
+import Instrument from "../assests/exaspim_instrument_control.jpg";
+import Acquisition from "../assests/acquisition_view.jpg";
 
-export function DynamicForagingDetailed() {
+export function ExaSpimDetailed() {
   return (
     <Container size="lg" py="xl">
       <Stack gap="xl">
         {/* Header */}
         <Stack gap="sm">
-          <Text size="xl">DYNAMIC FORAGING PLATFORM</Text>
+          <Text size="xl">EXASPIM UI</Text>
           <Text c="dimmed" size="md" maw={700}>
-            A software platform for running live mice experiments that supports
-            experimental control, data collection, and interaction with institute
-            infrastructure. This project is currently undergoing a refactor to improve
-            maintainability, scalability, and cross-team collaboration.
+            A PyQt-based application for controlling lightsheet microscopes used
+            in experimental imaging workflows. The system abstracts instrument
+            control and acquisition logic into configuration-driven views,
+            allowing new hardware and protocols to be added without modifying
+            core UI code. This design prioritizes flexibility for hardware
+            across vendors and microscope variants.
           </Text>
           <Group>
             <Button
+              color="light-dark(#3c2155, #8047b6)"
               variant="outline"
               leftSection={<IconBrandGithub size={18} />}
               component="a"
-              href="https://github.com/AllenNeuralDynamics/Aind.Behavior.DynamicForaging"
+              href="https://github.com/AllenNeuralDynamics/view"
               target="_blank"
               rel="noreferrer"
             >
               View on GitHub
             </Button>
+            <Button
+              color="light-dark(#3c2155, #8047b6)"
+              variant="outline"
+              leftSection={<IconLink size={18} />}
+              component="a"
+              href="https://alleninstitute.org/news/a-new-custom-built-microscope-is-capturing-stunning-views-of-the-brain/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              View on Allen Institute
+            </Button>
           </Group>
         </Stack>
-
-        {/* Motivation */}
+        <Card
+          withBorder
+          radius="md"
+          p="md"
+          style={{
+            height: "80vh",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Image
+            src={BrainImage}
+            alt="ExaSPIM Image"
+            radius="sm"
+            fit="contain"
+            style={{
+              maxHeight: "100%",
+              maxWidth: "100%",
+              objectFit: "contain",
+              display: "block",
+            }}
+          />
+          <Text size="sm" c="dimmed" mt="sm">
+            ExaSPIM image.
+          </Text>
+        </Card>
         <Stack gap="sm">
-          <Text size="xl">MOTIVATION</Text>
+          <Text size="xl">PROBLEM</Text>
           <Card withBorder radius="md" p="lg">
-            <Text>
-              The Dynamic Foraging Platform coordinates live mouse experiments,
-              managing hardware control, data collection, and integration with
-              institute infrastructure. As the system has grown, maintaining and
-              extending the existing codebase has become challenging. The ongoing
-              refactor aims to improve modularity, reusability, and adherence to
-              institute standards, while supporting safe contributions from multiple teams.
+            <Text size="sm">
+              Experimental microscopes often use different hardware across
+              instruments, depending on availability or budget constraints. New
+              ideas for hardware can also require swapping components or
+              integrating novel devices. Updating UIs to accommodate these
+              changes is difficult, as each instrument may have slightly
+              different control requirements. Additionally, while acquisition
+              protocols may be similar across microscopes, they must remain
+              configurable to support the specific capabilities of each system,
+              making maintainable and flexible UI design critical.
             </Text>
           </Card>
         </Stack>
-
-        {/* Refactor Goals */}
         <Stack gap="sm">
-          <Text size="xl">REFACTOR GOALS</Text>
+          <Text size="xl">SOFTWARE REQUIREMENTS</Text>
           <Card withBorder radius="md" p="lg">
-            <Text mb="sm">
-              The refactor focuses on the following objectives:
+            <Text size="sm">
+              The UI was designed to be flexible, maintainable, and extensible,
+              supporting multiple microscope variants and vendors. It enforces
+              separation of concerns between core acquisition logic, hardware
+              control, and UI presentation, while maintaining modularity so that
+              hardware-specific widgets can be added or updated independently.
+              Configuration-driven views ensure that new instruments and
+              protocols can be integrated without changing the underlying UI
+              code, enabling reusability, extensibility, and long-term
+              maintainability.
             </Text>
-            <SimpleGrid cols={{ base: 1, md: 2 }} spacing="lg">
-              <Card withBorder radius="md" p="md">
-                <Title order={4}>Modularity</Title>
-                <Text size="sm" c="dimmed">
-                  Breaking the platform into independent modules for experiment control,
-                  data acquisition, and hardware interfaces to improve maintainability
-                  and testability.
-                </Text>
-              </Card>
-              <Card withBorder radius="md" p="md">
-                <Title order={4}>Scalability</Title>
-                <Text size="sm" c="dimmed">
-                  Designing components to support additional experiments, hardware,
-                  and growing data volumes without introducing unnecessary complexity.
-                </Text>
-              </Card>
-              <Card withBorder radius="md" p="md">
-                <Title order={4}>Standards Compliance</Title>
-                <Text size="sm" c="dimmed">
-                  Aligning with institute coding, documentation, and testing standards
-                  to ensure the platform remains maintainable and extensible.
-                </Text>
-              </Card>
-              <Card withBorder radius="md" p="md">
-                <Title order={4}>Cross-Team Collaboration</Title>
-                <Text size="sm" c="dimmed">
-                  Enabling multiple teams to contribute safely through clear module
-                  boundaries and reusable interfaces.
-                </Text>
-              </Card>
-            </SimpleGrid>
           </Card>
         </Stack>
-
-        {/* Design Decisions */}
         <Stack gap="sm">
-          <Text size="xl">DESIGN DECISIONS</Text>
+          <Text size="xl">DESIGN & ARCHITECTURE</Text>
           <Card withBorder radius="md" p="lg">
-            <SimpleGrid cols={{ base: 1, md: 3 }} spacing="lg">
-              <Stack gap="xs">
-                <Title order={4}>Component-Based Architecture</Title>
-                <Text size="sm" c="dimmed">
-                  Subsystems for experiment control, data collection, and hardware
-                  communication are implemented as independent modules with clear APIs.
-                </Text>
-              </Stack>
-              <Stack gap="xs">
-                <Title order={4}>Configuration-Driven</Title>
-                <Text size="sm" c="dimmed">
-                  Experiment parameters, hardware mappings, and workflows are defined
-                  via configuration files, reducing hard-coded dependencies and
-                  improving reproducibility.
-                </Text>
-              </Stack>
-              <Stack gap="xs">
-                <Title order={4}>Refactor Leveraging Existing Code</Title>
-                <Text size="sm" c="dimmed">
-                  Previously written software from related projects is reused to reduce
-                  duplicated code and accelerate development while preserving proven
-                  functionality.
-                </Text>
-              </Stack>
-            </SimpleGrid>
+            <Text size="sm">
+              The ExaSPIM UI separates instrument control and acquisition into
+              distinct views to improve clarity and maintainability. The
+              instrument UI is organized by hardware type, with widgets
+              dynamically generated from properties specified in the hardware
+              drivers, allowing new devices to be added without modifying core
+              code. Acquisition control is structured into multiple components,
+              including volume specification, tile specification, an OpenGL
+              visualization of the configured volume, and operation controls.
+              This modular design enables flexible configuration, supports
+              diverse hardware, and makes it easier to maintain and extend the
+              system as experimental needs evolve.
+            </Text>
+          </Card>
+          <Card
+            withBorder
+            radius="md"
+            p="md"
+            style={{
+              height: "80vh",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <Image
+              src={Instrument}
+              alt="ExaSPIM instrument view"
+              radius="sm"
+              fit="contain"
+              style={{
+                maxHeight: "100%",
+                maxWidth: "100%",
+                objectFit: "contain",
+                display: "block",
+              }}
+            />
+            <Text size="sm" c="dimmed" mt="sm">
+              Instrument view.
+            </Text>
+          </Card>
+          <Card
+            withBorder
+            radius="md"
+            p="md"
+            style={{
+              height: "80vh",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <Image
+              src={Acquisition}
+              alt="ExaSPIM acquisition view"
+              radius="sm"
+              fit="contain"
+              style={{
+                maxHeight: "100%",
+                maxWidth: "100%",
+                objectFit: "contain",
+                display: "block",
+              }}
+            />
+            <Text size="sm" c="dimmed" mt="sm">
+              Acquisition view.
+            </Text>
           </Card>
         </Stack>
 
         {/* Role */}
         <Stack gap="sm">
-          <Text size="xl">MY ROLE</Text>
+          <Text size="xl">ROLE</Text>
           <Card withBorder radius="md" p="lg">
-            <Text>
-              I am leading the refactor of the Dynamic Foraging Platform, focusing
-              on modularity, standards compliance, and reusability. I coordinate
-              cross-team contributions, make architectural decisions, and ensure
-              the platform can scale safely as new experiments, hardware, and features
-              are added over time.
+            <Text size="sm">
+              I led the UI architecture and integration of hardware-agnostic
+              widgets, designing a modular, configuration-driven frontend that
+              supports multiple microscope variants. My focus was on
+              flexibility, ensuring the UI can evolve as new hardware and
+              protocols are added.
             </Text>
           </Card>
         </Stack>

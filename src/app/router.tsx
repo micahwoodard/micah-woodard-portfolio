@@ -28,7 +28,7 @@ export const AppRouter = () => {
         element={<DynamicForagingDetailed />}
       />
       <Route
-        path="/micah-woodard-portfolio/exa_spim"
+        path="/micah-woodard-portfolio/exa_spim_ui"
         element={<ExaSpimDetailed />}
       />
     </Routes>
