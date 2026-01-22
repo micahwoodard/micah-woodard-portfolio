@@ -10,6 +10,7 @@ import { ExaSpimDetailed } from "@/features/exaSpimUi";
 
 export const AppRouter = () => {
   return (
+    
     <Routes>
       <Route path="/micah-woodard-portfolio/" element={<HomePage />} />
       <Route path="/micah-woodard-portfolio/resume" element={<ResumePage />} />

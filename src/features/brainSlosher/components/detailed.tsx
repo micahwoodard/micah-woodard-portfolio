@@ -90,7 +90,7 @@ export function BrainSlosherDetailed() {
           <Card withBorder radius="md" p="lg">
             <Text mb="sm">
               The software needed to control the automated fluidic wash system.
-              The control software need an accompanying UI to build protocols
+              The control software needed an accompanying UI to build protocols
               while providing real-time monitoring of protocol progress. Users
               should be able to intervene or pause and track progress remotely,
               ensuring accuracy and reducing manual workload.

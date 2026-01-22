@@ -88,8 +88,8 @@ export function BskiDetailed() {
               The solution needed to provide an automated way to generate and
               save barcode–tissue associations per indexer, while allowing users
               to select relevant tissue metadata incorporated into standardized
-              naming conventions. When a user scanned a barcode, the UI
-              retrieved the tissue name associated with it.
+              naming conventions. When a user scanned a barcode, the UI needed to
+              retrieve the tissue name associated with it.
             </Text>
           </Card>
 
@@ -202,8 +202,7 @@ export function BskiDetailed() {
               {" "}
               The system has been used across six distinct production workflows
               with no recorded erroneous barcode–tissue associations. Its
-              configuration-driven design has allowed multiple labs, internal
-              teams, and external collaborators to adapt the same software to
+              configuration-driven design has allowed multiple labs to adapt the same software to
               their specific processes without requiring code changes,
               supporting reliable scaling in active lab environments.
             </Text>

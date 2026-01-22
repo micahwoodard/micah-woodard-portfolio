@@ -82,7 +82,7 @@ export function ExaSpimDetailed() {
         <Stack gap="sm">
           <Text size="xl">PROBLEM</Text>
           <Card withBorder radius="md" p="lg">
-            <Text size="sm">
+            <Text size="md">
               Experimental microscopes often use different hardware across
               instruments, depending on availability or budget constraints. New
               ideas for hardware can also require swapping components or
@@ -98,7 +98,7 @@ export function ExaSpimDetailed() {
         <Stack gap="sm">
           <Text size="xl">SOFTWARE REQUIREMENTS</Text>
           <Card withBorder radius="md" p="lg">
-            <Text size="sm">
+            <Text size="md">
               The UI was designed to be flexible, maintainable, and extensible,
               supporting multiple microscope variants and vendors. It enforces
               separation of concerns between core acquisition logic, hardware
@@ -114,7 +114,7 @@ export function ExaSpimDetailed() {
         <Stack gap="sm">
           <Text size="xl">DESIGN & ARCHITECTURE</Text>
           <Card withBorder radius="md" p="lg">
-            <Text size="sm">
+            <Text size="md">
               The ExaSPIM UI separates instrument control and acquisition into
               distinct views to improve clarity and maintainability. The
               instrument UI is organized by hardware type, with widgets
@@ -188,7 +188,7 @@ export function ExaSpimDetailed() {
         <Stack gap="sm">
           <Text size="xl">ROLE</Text>
           <Card withBorder radius="md" p="lg">
-            <Text size="sm">
+            <Text size="md">
               I led the UI architecture and integration of hardware-agnostic
               widgets, designing a modular, configuration-driven frontend that
               supports multiple microscope variants. My focus was on
