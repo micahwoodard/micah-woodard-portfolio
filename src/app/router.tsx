@@ -12,24 +12,24 @@ export const AppRouter = () => {
   return (
     
     <Routes>
-      <Route path="/micah-woodard-portfolio/" element={<HomePage />} />
-      <Route path="/micah-woodard-portfolio/resume" element={<ResumePage />} />
-      <Route path="/micah-woodard-portfolio/about" element={<AboutPage />} />
+      <Route path="/" element={<HomePage />} />
+      <Route path="/resume" element={<ResumePage />} />
+      <Route path="/about" element={<AboutPage />} />
       <Route
-        path="/micah-woodard-portfolio/prototome_web_ui"
+        path="/prototome_web_ui"
         element={<PrototomeWebUiDetailed />}
       />
-      <Route path="/micah-woodard-portfolio/BSKI" element={<BskiDetailed />} />
+      <Route path="/BSKI" element={<BskiDetailed />} />
       <Route
-        path="/micah-woodard-portfolio/brain_slosher"
+        path="/brain_slosher"
         element={<BrainSlosherDetailed />}
       />
       <Route
-        path="/micah-woodard-portfolio/dynamic_foraging"
+        path="/dynamic_foraging"
         element={<DynamicForagingDetailed />}
       />
       <Route
-        path="/micah-woodard-portfolio/exa_spim_ui"
+        path="/exa_spim_ui"
         element={<ExaSpimDetailed />}
       />
     </Routes>
