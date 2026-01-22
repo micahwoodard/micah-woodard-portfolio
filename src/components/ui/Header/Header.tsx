@@ -17,9 +17,9 @@ export const Header = () => {
     >
       <Text
         component={Link}
-        to="/micah-woodard-portfolio"
+        to="/"
         variant={
-          location.pathname === "/micah-woodard-portfolio"
+          location.pathname === "/"
             ? "filled"
             : "outline"
         }
