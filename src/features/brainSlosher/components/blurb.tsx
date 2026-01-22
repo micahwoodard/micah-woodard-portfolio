@@ -7,7 +7,7 @@ export const BrainSlosherBlurb = () => {
       imageSrc={BrainSlosherUI}
       imageAlt="Brain Slosher UI"
       title="Brain Slosher Software"
-      href="/micah-woodard-portfolio/brain_slosher"
+      href="/brain_slosher"
       repoUrl="https://github.com/AllenNeuralDynamics/brainslosher-web-ui"
       overlayContent={
         <div>

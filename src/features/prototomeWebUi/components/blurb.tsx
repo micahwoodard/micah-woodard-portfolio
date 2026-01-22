@@ -7,7 +7,7 @@ export const PrototomeWebUiBlurb = () => {
       imageSrc={prototomeUiImage}
       imageAlt="Prototome UI"
       title="Prototome Web UI"
-      href="/micah-woodard-portfolio/prototome_web_ui"
+      href="/prototome_web_ui"
       repoUrl="https://github.com/AllenNeuralDynamics/prototome-web-ui"
       overlayContent={
         <div>

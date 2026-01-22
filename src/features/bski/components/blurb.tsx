@@ -7,7 +7,7 @@ export const BskiBlurb = () => {
       imageSrc={registerWidget}
       imageAlt="BSKI UI"
       title="Brain Slice Keeper Indexer"
-      href="/micah-woodard-portfolio/BSKI"
+      href="/BSKI"
       repoUrl="https://github.com/AllenNeuralDynamics/BSK-Indexer"
       overlayContent={
         <div>

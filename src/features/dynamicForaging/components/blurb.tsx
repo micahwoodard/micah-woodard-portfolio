@@ -7,7 +7,7 @@ export const DynamicForagingBlurb = () => {
       imageSrc={DynamicForagingArc}
       imageAlt="Dynamic Foraging Arc"
       title="Dynamic Foraging Behavior Platform"
-      href="/micah-woodard-portfolio/dynamic_foraging"
+      href="/dynamic_foraging"
       repoUrl="https://github.com/AllenNeuralDynamics/Aind.Behavior.DynamicForaging"
       overlayContent={
         <div>

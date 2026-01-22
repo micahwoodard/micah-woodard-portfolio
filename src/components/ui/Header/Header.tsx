@@ -32,7 +32,7 @@ export const Header = () => {
           <Menu.Target>
             <Text
               component={Link}
-              to="/micah-woodard-portfolio"
+              to=""
               variant={location.pathname === "/about" ? "filled" : "outline"}
               style={{ fontSize: "clamp(8px, 2vw, 16px)", textAlign: "right" }}
             >
@@ -42,30 +42,30 @@ export const Header = () => {
           <Menu.Dropdown>
             <Menu.Item
               onClick={() =>
-                navigate("/micah-woodard-portfolio/prototome_web_ui")
+                navigate("/prototome_web_ui")
               }
             >
               PROTOTOME WEB UI
             </Menu.Item>
             <Menu.Item
-              onClick={() => navigate("/micah-woodard-portfolio/BSKI")}
+              onClick={() => navigate("/BSKI")}
             >
               BSKI
             </Menu.Item>
             <Menu.Item
-              onClick={() => navigate("/micah-woodard-portfolio/brain_slosher")}
+              onClick={() => navigate("/brain_slosher")}
             >
               BRAIN SLOSHER
             </Menu.Item>
             <Menu.Item
               onClick={() =>
-                navigate("/micah-woodard-portfolio/dynamic_foraging")
+                navigate("/dynamic_foraging")
               }
             >
               DYNAMIC FORAGING
             </Menu.Item>
             <Menu.Item
-              onClick={() => navigate("/micah-woodard-portfolio/exa_spim_ui")}
+              onClick={() => navigate("/exa_spim_ui")}
             >
               EXA-SPIM UI
             </Menu.Item>
@@ -73,9 +73,9 @@ export const Header = () => {
         </Menu>
         <Text
           component={Link}
-          to="/micah-woodard-portfolio/about"
+          to="/about"
           variant={
-            location.pathname === "/micah-woodard-portfolio/about"
+            location.pathname === "/about"
               ? "filled"
               : "outline"
           }
@@ -85,9 +85,9 @@ export const Header = () => {
         </Text>
         <Text
           component={Link}
-          to="/micah-woodard-portfolio/resume"
+          to="/resume"
           variant={
-            location.pathname === "/micah-woodard-portfolio/resume"
+            location.pathname === "/resume"
               ? "filled"
               : "outline"
           }

@@ -7,7 +7,7 @@ export const ExaSpimUi = () => {
       imageSrc={ExaSpimUiImage}
       imageAlt="ExaSpim UI"
       title="ExaSpim UI"
-      href="/micah-woodard-portfolio/exa_spim"
+      href="/exa_spim"
       repoUrl="https://github.com/AllenNeuralDynamics/view"
       overlayContent={
         <div>
